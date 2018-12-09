@@ -163,7 +163,7 @@ import UIKit
   override open func layoutSubviews() {
     layoutCharactersAndPlaceholders()
     super.layoutSubviews()
-    self.bringSubview(toFront: self.invisibleField)
+    self.bringSubviewToFront(self.invisibleField)
     self.invisibleField.frame = self.bounds
   }
   
