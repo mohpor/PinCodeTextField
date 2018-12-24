@@ -78,9 +78,6 @@ import UIKit
     let text = self.invisibleField.text ?? ""
     self.invisibleField.text = text
     self.text = invisibleText
-    if text.count == characterLimit {
-      endEditing(true)
-    }
   }
 
   
