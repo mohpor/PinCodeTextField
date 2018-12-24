@@ -165,7 +165,7 @@ import UIKit
   }
   
   override open var canBecomeFirstResponder: Bool {
-    return false
+    return true
   }
   
   @discardableResult override open func becomeFirstResponder() -> Bool {
