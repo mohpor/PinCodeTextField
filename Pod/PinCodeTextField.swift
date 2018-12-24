@@ -11,7 +11,7 @@ import UIKit
   @IBInspectable public var underlineWidth: CGFloat = 40
   @IBInspectable public var underlineHSpacing: CGFloat = 10
   @IBInspectable public var underlineVMargin: CGFloat = 0
-  @IBInspectable public var characterLimit: Int = 4 {
+  @IBInspectable public var characterLimit: Int = 5 {
     willSet {
       if characterLimit != newValue {
         updateView()
@@ -60,7 +60,7 @@ import UIKit
   }
   
   // UITextField
-  private var invisibleField = UITextField()
+  public var invisibleField = UITextField()
   private var invisibleText : String {
     get {
       return invisibleField.text ?? ""
@@ -79,7 +79,7 @@ import UIKit
     self.invisibleField.text = text
     self.text = invisibleText
     if text.count == characterLimit {
-      invisibleField.resignFirstResponder()
+      endEditing(true)
     }
   }
 
