@@ -165,7 +165,7 @@ import UIKit
   }
   
   override open var canBecomeFirstResponder: Bool {
-    return true
+    return false
   }
   
   @discardableResult override open func becomeFirstResponder() -> Bool {
@@ -338,15 +338,15 @@ import UIKit
   
   //MARK: Touches
   override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    guard let touch = touches.first else {
-      return
-    }
-    let location = touch.location(in: self)
-    if (bounds.contains(location)) {
-      if (delegate?.textFieldShouldBeginEditing(self) ?? true) {
-        let _ = becomeFirstResponder()
-      }
-    }
+//    guard let touch = touches.first else {
+//      return
+//    }
+//    let location = touch.location(in: self)
+//    if (bounds.contains(location)) {
+//      if (delegate?.textFieldShouldBeginEditing(self) ?? true) {
+//        let _ = becomeFirstResponder()
+//      }
+//    }
   }
   
   
